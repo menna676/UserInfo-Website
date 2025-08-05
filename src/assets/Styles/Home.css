@@ -1,0 +1,143 @@
+.home {
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 80px);
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #1f2937;
+}
+
+.home p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #6b7280;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.user-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 70px;
+  align-items: center;
+  text-align: center;
+  min-height: 280px;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.user-avatar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.user-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2563eb;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  align-items: center;
+}
+
+.user-info h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #1f2937;
+}
+
+.user-email {
+  color: #2563eb;
+  margin-bottom: 0;
+  font-weight: 600;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+.user-role {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.user-company {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.view-profile-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 130px;
+}
+
+.view-profile-btn:hover {
+  transform: translateX(-50%) translateY(-2px);
+  background: #003fc7;
+}
+
+@media (max-width: 768px) {
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .user-card {
+    padding: 1rem;
+  }
+
+  .home h1 {
+    font-size: 1.75rem;
+  }
+}
